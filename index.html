@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="flowers.png" type="image/x-icon">
+  <title>Para ti Gabriela, mi inspiración</title>
+  <style>
+    :root {
+    --bg-light: #f4f0fb;
+    --panel-white: #ffffff;
+    --violeta-suave: #d4b8f0;
+    --violeta-oscuro: #4a235a;
+    --rosa-claro: #fdddfc;
+    }
+
+    * {
+    box-sizing: border-box;
+    }
+
+    body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg-light);
+    color: var(--violeta-oscuro);
+    }
+
+    header {
+    text-align: center;
+    padding: 80px 20px 40px;
+    }
+
+    .typed-text {
+    font-size: 1.8em;
+    border-right: 2px solid var(--violeta-oscuro);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    color: var(--violeta-oscuro);
+    animation: typing 4s steps(60, end) forwards, blink 1s infinite;
+    }
+
+    @keyframes typing {
+    to {
+        width: 100%;
+        }
+        }
+        @keyframes blink {
+        0%, 100% { border-color: transparent; }
+        50% { border-color: var(--violeta-oscuro); }
+        }
+
+        section {
+        max-width: 900px;
+        margin: 20px auto;
+        background: var(--panel-white);
+        color: var(--violeta-oscuro);
+        padding: 25px;
+        border-radius: 20px;
+        border: 2px solid var(--violeta-suave);
+        box-shadow: 0 0 10px rgba(100, 80, 160, 0.1);
+        }
+
+        p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        }
+
+        .imagen {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+        }
+        .imagen img {
+        width: 100%;
+        max-width: 320px;
+        border-radius: 20px;
+        border: 4px solid var(--violeta-suave);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .secreto {
+        margin-top: 20px;
+        text-align: center;
+        }
+        .btn-secreto {
+        background-color: var(--rosa-claro);
+        color: var(--violeta-oscuro);
+        padding: 12px 24px;
+        border: none;
+        font-weight: bold;
+        font-size: 1.1em;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        }
+        .btn-secreto:hover {
+        background-color: var(--violeta-suave);
+        }
+
+        #picante {
+        display: none;
+        margin-top: 20px;
+        background-color: #f9f2ff;
+        color: var(--violeta-oscuro);
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid var(--violeta-suave);
+        }
+
+        footer {
+        text-align: center;
+        padding: 30px 20px;
+        font-size: 1em;
+        color: #7b5190;
+        }
+
+        /* Responsivo */
+        @media (max-width: 600px) {
+        header {
+            padding-top: 60px;
+        }
+        .typed-text {
+            font-size: 1.4em;
+        }
+        p {
+            font-size: 1em;
+        }
+        .btn-secreto {
+            font-size: 1em;
+            padding: 10px 20px;
+        }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="typed-text" id="typed-text"></div>
+  </header>
+
+  <section>
+    <p>Eres una chica con quien sé que puedo crecer mucho, superar barreras que tengo por mi pereza. Me motivas a mejorar, a superarme. Admiro cómo te esfuerzas y eso me impulsa a dar más de mí mismo.</p>
+
+    <p>Gracias a ti, quiero mejorar mi inglés, buscar más oportunidades y no quedarme quieto. Me inspiras en todos los sentidos, y eso es muy bonito. Eres mi motivación diaria.</p>
+
+    <p>En lo personal, me encanta tu forma de ser, tu humor, tu personalidad, y cómo siempre te das tu lugar. Eres una dama, una princesa. Contigo puedo hablar de sentimientos, pero también de cosas académicas, y eso me encanta. Amo cuando caminamos, cuando te abrazo, cuando nos acariciamos. Eres inteligente, dulce y me encantas completamente.</p>
+
+    <p>Físicamente, uff... me encantas. Tu rostro, tu sonrisa, tus gestos, tus ojos, tu cabello, tus manos... todo me atrae. Y claro, tu cuerpo también me fascina, no puedo negarlo.</p>
+    
+    <p>Quiero seguir compartiendo momentos bonitos contigo, adoro pasar tiempo contigo como te dije y quiero seguir amándote uwu ❤️</p>
+</section>
+
+  <div class="imagen">
+    <img src="nosotros.jpg" alt="Nosotros dos" />
+  </div>
+
+  <section class="secreto">
+    <button class="btn-secreto" onclick="mostrarPicante()">¿Quieres leer algo más picante?</button>
+    <div id="picante">
+      <p>Ahora, yendo un poco más a lo picante... En serio, amo tu cuerpo. Me encanta verte, me gustan tus caricias, tus besos, tus gestos y en el sexo también uwu. Me fascinas en todos los sentidos, y deseo seguir descubriéndote cada día más.</p>
+    </div>
+  </section>
+
+  <footer>
+    Hecho con mucho cariño, pensando en ti.
+  </footer>
+
+  <script>
+    const texto = "Hola Gabriela hermosa, esta página es para ti... mi linda inspiración.";
+    let i = 0;
+    const speed = 50;
+    const typed = document.getElementById("typed-text");
+
+    function typeWriter() {
+      if (i < texto.length) {
+        typed.innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    typeWriter();
+
+    function mostrarPicante() {
+      const picante = document.getElementById("picante");
+      picante.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
