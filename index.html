@@ -31,14 +31,16 @@
     }
 
     .typed-text {
-    font-size: 1.8em;
-    border-right: 2px solid var(--violeta-oscuro);
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    color: var(--violeta-oscuro);
-    animation: typing 4s steps(60, end) forwards, blink 1s infinite;
+      font-size: 1.8em;
+      border-right: 2px solid var(--violeta-oscuro);
+      overflow: hidden;
+      width: 0;
+      color: var(--violeta-oscuro);
+      animation: typing 4s steps(60, end) forwards, blink 1s infinite;
+      white-space: normal;
+      display: inline-block;
     }
+
 
     @keyframes typing {
     to {
